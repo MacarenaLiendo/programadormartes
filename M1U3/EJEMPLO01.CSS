@@ -1,0 +1,30 @@
+h2 {
+    color: red;
+    font-family: arial;
+    font-size: 55px;
+    text-align: center;
+    background-color: yellow;
+    text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.6);
+}
+
+p {
+    color: blue;
+    column-count: 2;
+}
+
+div {
+    width: 200px;
+    height: 200px;
+    background-color: aqua;
+    box-shadow: 8px 72px 46px 59px rgba(0, 0, 0, 0.66);
+    border: 14px dashed #ff6550;
+    border-radius: 0px 200px 200px 200px;
+    padding: 30px;
+    margin-left: 150px;
+}
+
+.DESTACADO{
+    color: aqua;
+    font-weight: bold;
+    font-size: 29px;
+}
