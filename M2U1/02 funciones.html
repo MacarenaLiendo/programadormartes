@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="content-type" content="text/html" >
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function mostrarFecha(meses,dias){
+            var num;
+            num=prompt("ingrese numero de mes: ", "");
+            num=parseInt(num);
+
+            document.write("corresponde al mes: " + meses[num-1]);
+            document.write("<br>");
+            document.write("tiene " + dias[num-1] +" dias");
+        }
+        var meses;
+        meses=new Array(12);
+        meses[0]="enero";
+        meses[1]="febrero";
+        meses[2]="marzo";
+        meses[3]="abril";
+        meses[4]="mayo";
+        meses[5]="junio";
+        meses[6]="julio";
+        meses[7]="agosto";
+        meses[8]="septiembre";
+        meses[9]="octubre";
+        meses[10]="noviembre";
+        meses[11]="diciembre";
+
+        var dias
+        dias=new Array(12)
+        dias[0]="31";
+        dias[1]="28";
+        dias[2]="31";
+        dias[3]="30";
+        dias[4]="31";
+        dias[5]="30";
+        dias[6]="31";
+        dias[7]="30";
+        dias[8]="31";
+        dias[9]="30";
+        dias[10]="31";
+        dias[11]="30";
+
+       mostrarFecha(meses,dias) ;
+
+    </script>
+
+
+</body>
+
+</html>

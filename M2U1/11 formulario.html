@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Formulario</h1>
+    <form action="enviar.php" id="formulario">
+        <p>
+            <label>Nombre: <input name="nombre" type="texto"></label>
+        </p>
+        <p>
+            <label>Mensaje: <textarea name="mensaje" cols="30" rows="10"></textarea></label>
+        </p>
+        <p>
+            <button>enviar</button>
+        </p>
+    </form>
+    <script>
+        var formulario=document.getElementById
+        ("formulario");
+        formulario.addEventListener("submit",function(e){
+            e.preventDefault();
+            if(e.target.nombre.value==""){
+                alert ("el campo nombre es requerido");
+                return;
+            }
+            if(e.target.mensaje.value==""){
+                alert("el campo mensje es requerido");
+                return;
+            }
+            alert("gracias "+e.target.nombre.value+ " por enviarnos "+e.target.mensaje.value+"");
+        });
+    </script>
+</body>
+</html>

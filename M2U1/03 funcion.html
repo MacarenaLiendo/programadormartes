@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="content-type" content="text/html">
+    <title>Document</title>
+    <script>
+        function validar (){
+            if(document.form1.text1.value.length<5){
+                alert("ingrese al menos 5 caracteres");
+            }
+        }
+    </script>
+</head>
+<body>
+<form name="form1">
+    ingrese clave(al menos 5 caracteres):
+    <input type="password" name="text1">
+    <input type="button" onclick="validar()"
+    value="enviar"
+</form>
+
+    
+</body>
+</html>
