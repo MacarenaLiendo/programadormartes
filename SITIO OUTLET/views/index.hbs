@@ -11,15 +11,15 @@
     <!--fin home-->
     <!--inicio novedades-->
     <div class="row my-3">
-        <div id="productos" class="col-md-5 offset-md-2 py-3 scroll_section">
-            <h2>Productos</h2>
-            <ul class="lista-productos">
-                <li><a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                        <img src="images/panificado.jpg">Panificados</a></li>
-                <li><a href="#"><img src="images/golosinas.jpg">Golosinas</a></li>
-                <li><a href="#"><img src="images/galletitas.jpg">Galletitas</a></li>
-                <li><a href="#"><img src="images/snack.jpg">Snacks</a></li>
-                <li><a href="#"><img src="images/novedades01.jpg">Nuevas recetas 5</a></li>
+        <div id="novedades" class="col-md-5 offset-md-2 py-3 scroll_section">
+            <h2>Novedades</h2>
+            <ul class="lista-novedades">
+                {{#each novedades}}
+                <li>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#Modal{{id}}">
+                        <img src="images/panificado.jpg">{{titulo}}</a>
+                </li>
+                {{/each}}
             </ul>
         </div>
         <!--inicio testimonio-->
@@ -71,25 +71,22 @@
         </div>
         <!--fin novedades-->
         <!--inicio modal-->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        {{#each novedades}}
+        <div class="modal fade" id="Modal{{id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Nuevas Recetas</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">{{titulo}}</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <h3>Hola soy un subtitulo</h3>
-                        <p>cuerpo: Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse odio aperiam
-                            delectus
-                            similique
-                            id ut velit sunt, unde reiciendis tempora! Dicta debitis deserunt beatae non ab in
-                            libero
-                            saepe quisquam.</p>
+                        <h3>{{subtitulo}}</h3>
+                        <p>{{cuerpo}}</p>
                     </div>
                 </div>
             </div>
         </div>
+        {{/each}}
         <!--fin modal-->
         <!--inicio historia-->
         <div id="historia" class="row align-items-center py-4 scroll_section">
