@@ -2,7 +2,8 @@ var express = require('express');
 var router = express.Router();
 var usuariosModel = require('./../../models/usuariosModel');
 
-router.get('/', function(req, res, next) {
+router.get('/logout', function (req, res, next) {
+    req.session.destroy();
     res.render('admin/login', { 
         layout: 'admin/layout',
      });
@@ -14,7 +15,7 @@ try {
     var password = req.body.password;
 
     var data = await
-    usuariosModel.getUserAndPassword(usuario, password);
+    usuariosModel.getUserByUsernameAndPassword(usuario, password);
 
     if (data != undefined) {
         req.session.id_usuario = data.id;
